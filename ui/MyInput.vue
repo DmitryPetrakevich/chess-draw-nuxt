@@ -10,7 +10,6 @@
 
 <script setup>
 import { defineProps } from 'vue';
-import { stringifyQuery } from 'vue-router';
 
 const props = defineProps({
     modelValue: {
@@ -19,7 +18,6 @@ const props = defineProps({
     },
     placeholder: {
         type: String,
-        default: "Введите текст..."
     }
 })
 
@@ -27,9 +25,9 @@ const props = defineProps({
 
 <style scoped>
 .input {
-    padding: 10px 20px;
+    padding: 5px 20px;
     box-sizing: border-box;
-    background-color: rgb(213, 240, 231);
+    background-color: rgb(246, 249, 248);
     border-radius: 5px;
 }
 </style>

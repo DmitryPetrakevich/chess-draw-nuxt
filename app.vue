@@ -5,15 +5,9 @@
       <PageHeader></PageHeader>
 
       <div class="app-content">
-        <TournamentForm />
-        <TournamentList />
-        
-
-       
-
+        <NuxtPage /> 
       </div>
     </div>
-
   </div>
 </template>
 
@@ -31,7 +25,7 @@ import PageHeader from './components/PageHeader.vue';
 }
 
 .app__container {
-  padding: 20px 120px;
+  padding: 0 120px;
   box-sizing: border-box;
   box-sizing: border-box;
 }

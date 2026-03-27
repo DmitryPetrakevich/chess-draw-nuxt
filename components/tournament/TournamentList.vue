@@ -3,13 +3,12 @@
         <div 
         v-for="item in tournamentStore.tournamentsList"
         :key="item.id"
-        class="list"
-        
+        class="list-item"
         >
         <TournamentItem 
         :title="item.title"
+        :id="item.id"
         />
-            
         </div>
     </div>
 </template>
