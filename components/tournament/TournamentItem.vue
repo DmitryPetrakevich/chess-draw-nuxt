@@ -1,15 +1,18 @@
 <template>
     <div class="tournament-item">
-        <NuxtLink :to="`/tournament/${id}`" class="tournament-item-link">
-            <div class="title">{{ title }}</div>
-        </NuxtLink>
+        <div class="title-wrapper">
+            <NuxtLink :to="`/tournament/${id}`" class="tournament-item-link">
+                {{ title }}
+            </NuxtLink>
+        </div>
         
         <MyButton
             @click.stop="handleDeleteTournament(id)"
             class="delete-btn"
-        >
-            Удалить
-        </MyButton>
+            size="small"
+            :icon="deleteIcon"
+            iconAlt="Удалить"
+        />
     </div>
 </template>
 
@@ -17,6 +20,8 @@
 import { useTournamentStore } from '#imports';
 
 import MyButton from '~/ui/MyButton.vue';
+
+import deleteIcon from '~/assets/icons/delete.svg'
 
 const props = defineProps({
     title: {
@@ -48,18 +53,26 @@ const handleDeleteTournament = (id: number | string) => {
     border-radius: 5px;
 }
 
-.tournament-item-link {
-    text-decoration: none;
+.title-wrapper {
+    display: flex;
+    align-items: center;
 }
 
-.title {
+.tournament-item-link {
+    display: inline-block;
+    line-height: 1.2;
     font-size: 20px;
+    font-weight: 500;
     color: @text-dark;
-    transition: all 0.2s ease;
-
+    text-decoration: none;
+    
     &:hover {
         color: @red-500;
     }
+}
+
+.delete-btn {
+    margin-left: 16px;
 }
 </style>
 

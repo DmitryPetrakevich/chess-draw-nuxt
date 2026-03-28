@@ -31,7 +31,7 @@ import PageHeader from './components/PageHeader.vue';
 }
 
 .app-content {
-  margin-top: 40px;
+  margin-top: 20px;
   box-sizing: border-box;
 }
 

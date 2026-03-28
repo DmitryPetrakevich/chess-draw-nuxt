@@ -19,13 +19,16 @@ import TournamentList from '~/components/tournament/TournamentList.vue'
 import TournamentForm from '~/components/tournament/TournamentForm.vue';
 
 const tournamentStore = useTournamentStore()
+
+
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .home {
     max-width: 80%;
     margin: 0 auto;
     text-align: center;
+    font-family: @font-primary;
 }
 
 .tournaments-section {
@@ -39,6 +42,7 @@ const tournamentStore = useTournamentStore()
 .my-title {
     font-size: 32px;
     margin-bottom: 16px;
+    font-weight: 500;
     text-align: center;
     color: #333;
 }
@@ -47,7 +51,7 @@ const tournamentStore = useTournamentStore()
     font-size: 26px;
     margin-bottom: 16px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
     color: #d23434;
 }
 

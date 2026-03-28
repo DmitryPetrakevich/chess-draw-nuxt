@@ -9,8 +9,6 @@
             <p class="info"> <strong>Место проведения:</strong> {{ tournament?.place }}</p>
             <p class="info"> <strong>Контроль времени:</strong> {{ tournament?.timeControl }}</p>
             <p class="info"> <strong>Главный судья:</strong> {{ tournament?.judge }}</p>
-
-            <NuxtLink to="/">← На главную</NuxtLink>
         </div>
 
         <PlayerForm /> 
@@ -59,7 +57,7 @@ const tournament = computed(() => {
 
 .title {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .general-info {

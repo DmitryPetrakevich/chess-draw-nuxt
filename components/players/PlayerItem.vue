@@ -7,9 +7,10 @@
 
         <MyButton
         @click="handleDeletePlayer(id)"
-        >
-            Удалить
-        </MyButton>
+        size="small"
+        :icon="deleteIcon"
+        iconAlt="Удалить"
+        />
     </div>
   
 </template>
@@ -17,6 +18,8 @@
 <script setup>
 import { usePlayersStore } from '#imports';
 import MyButton from '~/ui/MyButton.vue';
+
+import deleteIcon from '~/assets/icons/delete.svg'
 
 const playerStore = usePlayersStore()
 
